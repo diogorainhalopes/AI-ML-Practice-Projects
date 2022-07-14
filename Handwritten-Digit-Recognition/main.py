@@ -47,7 +47,7 @@ if var == 1: # sys.argv[1] == 'test': #load
 img_n = 1
 while os.path.exists(f"Digits/d{img_n}.png"): # using f-strings
     try:
-        img = cv2.imread(f"Digits/d{img_n}.png")[:,:,0]    # so por um zero?
+        img = cv2.imread(f"Digits/d{img_n}.png")[:,:,0]   
         # because the image comes in white on black instead of black on white we need to invert evry value
         img = np.invert(np.array([img]))
         prediction = model.predict(img)
